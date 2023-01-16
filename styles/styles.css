@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200&family=Roboto:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fbe8bf;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+body{
+    background-color:black;
+    font-family: 'Roboto', sans-serif;
+}
+header{
+    width: 100%;
+    height: 5.5rem;
+    border-bottom: 1px solid #fbe8bf;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+    margin-bottom: 2rem;
+}
+.fragancias{
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translateX(-100%);
+    transition: .5s;
+    z-index: 100;
+}
+.desplazado{
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translateX(0);
+    transition: .5s;
+}
+.fragancias a{
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 4rem;
+    color: #fbe8bf;
+}
+.masculino ,.femenino{
+    width: 100%;
+    height: .3rem;
+    background-color: #ffffff;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: .5s;
+    position: relative;
+    top: -3rem;
+}
+
+.mf{
+    display: flex;
+    flex-direction: column;
+}
+.fraganciaM:hover .masculino{
+transform: translateX(0);
+opacity: 1;
+}
+.fraganciasF:hover .femenino{
+    transform: translateX(0);
+    opacity: 1;
+}
+h1{
+    position: relative;
+    left: -3rem;
+}
+.contentImg{
+    width: 10rem;
+    height: 10rem;
+}
+.contentImg img{
+    width: 100%;
+    height: 100%;
+}
+.contenedorMenu{
+    width: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    transition: .3s;
+    position: relative;
+}
+.span{
+    width: 100%;
+    height: 1px;
+    background-color: #fed681;
+    transform-origin: 0px;
+    transition: .5s;
+    margin: 0.3rem;
+}
+.active .linea1{
+    transform: rotate(45deg);
+}
+.active .linea2{
+    transform: translateX(-2rem);
+    opacity: 0;
+}
+.active .linea3{
+    transform: rotate(-45deg);
+}
+/* fin header */
+
+
+/* comienzo firstStiek */
+#firstStike{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentText {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contentText h2{
+    font-size: 6rem;
+}
+.contentText p{
+    width: 70%;
+    font-size: 1.5rem;
+}
+.contentEros{
+    margin-left: 2rem;
+    box-shadow: 0px 0px 5px 3px #fbe8bf;
+    width: 90rem;
+    height: 95vh;
+    overflow: hidden;
+}
+/* fin first-stike */
+/* comienzo popular */
+#popular{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: 2rem;
+    background-color: rgb(3, 0, 0);
+    box-shadow: 0px 0px 25px 14px #000000;
+    padding: 1rem;
+}
+.popular{
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+}
+.contenedorPopular{
+    width: 100%;
+    display: flex;
+    justify-content :space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.contentVideo{
+    width: 50%;
+    height: 50%;
+    box-shadow: 0px 0px 15px 3px #aeaeae;
+}
+.contentVideo video{
+    width: 100%;
+    height: 100%;
+}
+.carrusel{
+    width: 25rem;
+    height: max-content;
+    position: relative;
+    top: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.slide{
+    border: 1px solid #fbe8bf;
+}
+.pacoRabbane{
+    width: 8rem;
+    margin-top: 1.5rem;
+    background-color: #fbe8bf;
+    color: black;
+    border-radius: .8rem;
+    border: 1px solid white;
+    transition: .3s;
+    font-weight: bold;
+}
+.pacoRabbane:hover{
+    background-color: white;
+}
+/* fin populares */
+
+/* footer */
+
+footer{
+    width: 100%;
+    height: 20vh;
+    margin-top: 1rem;
+}
+.contentRedes{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.contentRedes img{
+    width: 4rem;
+    height: 4rem;
+}
+
+@media screen and (max-width:960px){
+    h1{
+        position: relative;
+        left: 0;
+        font-size: 1rem;
+        display: none;
+    }
+    .contentImg{
+        width: 10rem;
+        height: 10rem;
+        position: relative;
+        left: -2rem;
+    }
+    .menu{
+        width: 3rem;
+        height: 3rem;
+    }
+    .fragancias{
+        height: 70%;
+    }
+    .fragancias a{
+        font-size: 1.5rem;
+    }
+    .masculino ,.femenino{
+        top: -1.3rem;
+    }
+    #firstStike{
+        flex-wrap: wrap;
+        height: max-content;
+    }
+    .contentEros{
+        width: 100%;
+        height: 37rem;
+        object-position: center;
+        overflow: hidden;
+        margin: 1rem;
+        object-position: center;
+    }
+    .contentEros img{
+        position: relative;
+        left: -4rem;
+    }
+    .contentText h2{
+        font-size: 4rem;
+    }
+    .contentText p{
+        font-size: 1.1rem;
+    }
+    #popular{
+        height: max-content;
+    }
+    .contenedorPopular{
+        height: max-content;
+        margin-bottom: 4rem;
+    }
+    .contentVideo{
+        width: 70%;
+    }
+    .olympea{
+        margin-top: 3rem;
+    }
+    .rabanneOlympea{
+      position: relative;
+      bottom: -12rem;
+    }
+    footer{
+        height: max-content;
+    }
+    .contentRedes{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .contentRedes img{
+        width: 3rem;
+        height: 3rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+}
